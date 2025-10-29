@@ -1,0 +1,241 @@
+:root {
+    --background-color: #780000;
+    --primary-color: #003049;
+    --secondary-color: #669BBC;
+    --text-color: #242424;
+    --accent-color: #FDF0D5;
+    --gray-color: #b9b9b9;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.header-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0 20px;
+    box-shadow: 0 8px 30px rgb(0,0,0,0.12);
+}
+
+
+ul, li {
+    list-style-type: none;
+}
+
+.header-navbar-right ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.5s ease;
+}
+
+.header-navbar-right .hamburger {
+    display: none;
+}
+
+.header-navbar-right ul li {
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: all 0.5s ease;
+}
+
+.header-navbar-right ul li:hover {
+    color: var(--secondary-color);
+    scale: 0.9;
+}
+
+/* Hero Section */
+
+.hero-section {
+    width:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 0 20px
+}
+.hero-left {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+}
+
+.hero-left h1 {
+    font-size: 72px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.hero-left span {
+    font-weight: bolder;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.hero-left span:hover {
+    color: var(--background-color);
+}
+
+.hero-left p {
+    width: 80%;
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-right-image img {
+    width: 800px;
+    height: auto;
+}
+
+.checkbox-menu-items {
+    display: none;
+}
+#checkbox-menu {
+    display: none;
+}
+
+.outer-box{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-box{
+    width: 67%;
+    height: 80vh;
+    background-image: linear-gradient(to top, #8ECBB7, white);
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-first{
+    color: #273C2F;
+    font-weight: bold;
+}
+
+.box-title{
+    font-size: 37px;
+    font-weight: bold;
+    color: #273C2F;
+}
+
+.box-description{
+    width: 85%;
+    text-align: center;
+    margin-top: 15px;
+    color: #383A3D
+}
+
+.cards-section{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.my-card{
+    background-color: white;
+    width: 23%;
+    padding: 40px 20px;
+    box-shadow: 0px 5px 2px rgba(173, 173, 173, 0.411);
+    border-radius: 20px;
+    outline: none;
+}
+
+.card-title{
+    font-weight: bold;
+    color: #273C2F;
+    font-size: 20px;
+}
+
+.card-description{
+    margin-top: 15px;
+    font-size: 14px;
+    color: #383A3D;
+}
+
+.card-link{
+    text-decoration: none;
+    color: #e19f67;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card-icon{
+    margin: 30px 0px;
+}
+
+.card-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.my-card:hover{
+    cursor: pointer;     
+    box-shadow: 0px 7px 2px rgba(173, 173, 173, 0.411);
+}
+
+
+@media (max-width: 768px)
+{
+    .header-navbar-right ul {
+        display: block;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: var(--accent-color);
+        margin: 0 20px;
+        padding: 0;
+        overflow: hidden;
+        text-align: center;
+    }
+    #checkbox-menu:checked + .checkbox-menu-items + .header-navbar-right ul {
+        max-height: 300px;
+    }
+    .checkbox-menu-items {
+        display: flex;
+    }
+    .header-navbar-right .hamburger {
+        display: block;
+    }
+    .hero-left  {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero-left h1 {
+        width: 80%;
+        font-size: 56px;
+        line-height: 0.9;
+    }
+    .hero-left p {
+        margin: 30px 0;
+    }
+
+    .hero-right-image img {
+        width: 300px;
+    }
+}
